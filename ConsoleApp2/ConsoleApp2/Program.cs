@@ -11,7 +11,6 @@ namespace ConsoleApp2
         static void Main(string[] args)
         {
             int[,] matrix = new int[1, 1] { { 1 } };
-            PrintBoard(matrix);
             do
             {
                 matrix = PumpMatrix(matrix);
@@ -27,8 +26,9 @@ namespace ConsoleApp2
             {
                 for (int j = 0; j < matrix.GetLength(1); j++)
                 {
-                    Console.Write(matrix[i,j]);
+                    Console.Write(matrix[i, j] + ",");
                 }
+                Console.WriteLine("\b ");
             }
         }
         static int[,] PumpMatrix(int[,] matrix)
